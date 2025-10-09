@@ -1,3 +1,5 @@
+name: Push new version to Internal
+
 on:
   workflow_dispatch:
 
@@ -13,8 +15,8 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mkdir -p build_output
-          gh release download 2.0.0 \
-            --pattern "com.vulcanorforgea.arvulfor_2.aab" \
+          gh release download 3.0.0 \
+            --pattern "com.vulcanorforgea.arvulfor_3.aab" \
             --dir build_output
 
       - name: Setup Ruby
