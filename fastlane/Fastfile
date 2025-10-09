@@ -3,8 +3,9 @@ platform :android do
     supply(
       json_key_data: ENV["GOOGLE_PLAY_JSON_KEY"], # або замість ENV — просто шлях до створеного JSON-файлу з ключем від Google Cloud Console
       package_name: "com.vulcanorforgea.arvulfor", # Bundle-ID створеного в консолі андроїд додатку
-      aab: "build_output/com.vulcanorforgea.arvulfor_2.aab", # шлях до aab після завантаження його туди у workflow з GitHub Releases
+      aab: "build_output/com.vulcanorforgea.arvulfor_3.aab", # шлях до aab після завантаження його туди у workflow з GitHub Releases
       track: "internal", # или closed, если трек существует
+      track: "alpha", # или closed, если трек существует
       release_status: "draft",                 # 🚀 только draft для чернового приложения
       track_promote_release_status: "draft",   # 🚨 добавь это обязательно
       changes_not_sent_for_review: true,       # 🚨 и это тоже
